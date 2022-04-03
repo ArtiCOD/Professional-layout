@@ -55,7 +55,9 @@ body {
     fill: var(--white-color);
 }
 
-.header__search :hover {
+.header__search :hover,
+.header__search:focus,
+.header__search:active {
     fill: var(--pink-color);
 }
 
@@ -64,7 +66,9 @@ body {
     fill: var(--white-color);
 }
 
-.header__link :hover {
+.header__link :hover,
+.header__link:focus,
+.header__link:active {
     fill: var(--pink-color);
 }
 
@@ -76,6 +80,12 @@ body {
 .header__burger {
     border: none;
     background-color: transparent;
+    fill: var(--white-color);
+}
+
+.header__burger:hover,
+.header__burger:focus {
+    fill: var(--pink-color);
 }
 
 .header__nav {
@@ -262,7 +272,8 @@ body {
 }
 
 .products__button:hover,
-.products__button:focus {
+.products__button:focus,
+.products__button:active {
     background-color: var(--dark-pink-color);
     color: var(--white-color);
 }
@@ -348,6 +359,13 @@ body {
     color: var(--white-color);
 }
 
+.subscription__button:hover,
+.subscription__button:focus,
+.subscription__button:active {
+    transform: scale(1.3);
+    transition: 1s;
+}
+
 .footer {
     display: flex;
     justify-content: space-around;
@@ -367,10 +385,13 @@ body {
     display: block;
     background-color: white;
     margin: 5px;
+    width: 20px;
+    text-align: center;
 }
 
 .footer__item-fcb:hover,
-.footer__item-fcb :focus {
+.footer__item-fcb:focus,
+.footer__item-fcb:active {
     background-color: var(--dark-pink-color);
     fill: var(--white-color);
 }
@@ -379,16 +400,20 @@ body {
     display: block;
     background-color: white;
     margin: 5px;
+    width: 20px;
+    text-align: center;
 }
 
-.footer__item-inst :hover,
-.footer__item-inst :focus {
+.footer__item-inst:hover,
+.footer__item-inst:focus,
+.footer__item-inst:active {
     background-color: var(--dark-pink-color);
     fill: var(--white-color);
 }
 
-.footer__item-p :hover,
-.footer__item-p :focus {
+.footer__item-p:hover,
+.footer__item-p:focus,
+.footer__item-p:active {
     background-color: var(--dark-pink-color);
     fill: var(--white-color);
 }
@@ -397,11 +422,14 @@ body {
     display: block;
     background-color: white;
     margin: 5px;
+    width: 20px;
+    text-align: center;
 
 }
 
-.footer__item-twit :hover,
-.footer__item-twit :focus {
+.footer__item-twit:hover,
+.footer__item-twit:focus,
+.footer__item-twit:active {
     background-color: var(--dark-pink-color);
     fill: var(--white-color);
 }
@@ -410,15 +438,9 @@ body {
     display: block;
     background-color: white;
     margin: 5px;
+    width: 20px;
+    text-align: center;
 }
-
-
-
-
-
-
-
-
 
 .products__item {
     position: relative;
@@ -458,8 +480,95 @@ body {
 
 }
 
-
-
 .active {
     display: block;
+}
+
+/* Registration */
+
+.registration__title {
+    background-color: var(--dark-grey-color);
+    height: 148px;
+}
+
+.registration__title-text {
+    color: var(--pink-color);
+    text-transform: uppercase;
+    padding: 59px 0 60px 230px;
+    font-size: 24px;
+}
+
+.hiden {
+    display: none;
+}
+
+.registration__form {
+    display: flex;
+    margin-bottom: 96px;
+}
+
+.registration__form-subscribe {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 230px;
+}
+
+.registration__form-name {
+    padding: 64px 0 20px 0;
+    font-size: 16px;
+}
+
+.registration__form-input {
+    width: 360px;
+    height: 45px;
+    margin-bottom: 20px
+}
+
+.registration__form-gender {
+    padding: 0 0 35px 0;
+}
+
+.registration__form-details {
+    padding: 0 0 20px 0;
+    font-size: 16px;
+}
+
+.registration__form-button {
+    width: 167px;
+    height: 50px;
+    background-color: var(--pink-color);
+    margin: 20px 0 0 0;
+    color: var(--white-color);
+    text-transform: uppercase;
+}
+
+.registration__form-button:hover,
+.registration__form-button:focus,
+.registration__form-button:active {
+    transform: scale(1.3);
+    transition: 1s;
+}
+
+.loyalty__title {
+    font-size: 24px;
+    margin: 64px 0 33px 50px;
+    font-weight: 300;
+}
+
+.loyalti__description {
+    font-size: 24px;
+    font-weight: 300;
+    font-weight: 300;
+    margin: 22px 0 21px 50px;
+}
+
+.loyalti-list {
+    display: flex;
+    margin: 0 0 16px 50px;
+}
+
+.loyalti-list-text {
+    font-size: 24px;
+    font-weight: 300;
+    margin: 0 0 0 24px;
 }
