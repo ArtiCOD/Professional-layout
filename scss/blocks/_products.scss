@@ -1,0 +1,90 @@
+.product__title {
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+}
+
+.products__sub-title {
+    font-weight: 400;
+    line-height: 17px;
+    text-align: center;
+}
+
+.products__list {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.products__item {
+    background-color: $grey-color;
+    margin: 47px 20px 0 0;
+    position: relative;
+}
+
+.products__item:hover .products__item-img {
+    filter: brightness(.6);
+}
+
+.products__item:hover .buy {
+    opacity: 1;
+}
+
+.products__item-title {
+    font-size: 13px;
+    line-height: 16px;
+    text-transform: uppercase;
+    padding: 30px 0 13px 18px;
+}
+
+.products__item-text {
+    width: 315px;
+    font-weight: 300;
+    line-height: 17px;
+    padding: 0 0 18px 18px;
+}
+
+.products__item-price {
+    color: $pink-color;
+    padding: 0 0 20px 18px;
+}
+
+.buy {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity .2s linear;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 9px 13px;
+    color: $white-color;
+    display: flex;
+    align-items: center;
+    border: 1px solid #FFFFFF;
+}
+
+.buy__img {
+    fill: $white-color;
+    margin-right: 10px;
+}
+
+.products__button {
+    margin: 49px 0 96px 42%;
+    padding: 15px 39px 13px 39px;
+    border: 1px solid $dark-pink-color;
+    font-size: 16px;
+    color: $pink-color;
+    background-color: $white-color;
+
+    &:hover {
+        background-color: $dark-pink-color;
+        color: $white-color;
+    }
+
+    &:focus {
+        background-color: $dark-pink-color;
+        color: $white-color;
+    }
+}
