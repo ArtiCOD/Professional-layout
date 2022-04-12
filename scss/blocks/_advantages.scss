@@ -1,0 +1,27 @@
+.advantages {
+    background-color: $black-bkg;
+}
+
+.advantages__title {
+    display: none;
+}
+
+.advantages__list {
+    display: flex;
+}
+
+.advantages__img {
+    padding: 103px 0 23px 0;
+}
+
+.advantages__item-title {
+    font-size: 20px;
+    color: $white-color;
+    padding: 0 0 16px 0;
+}
+
+.advantages__item-text {
+    font-weight: 300;
+    color: $white-color;
+    padding: 0 0 104px 0;
+}

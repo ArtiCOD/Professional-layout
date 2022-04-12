@@ -65,8 +65,11 @@ body {
 .hiden {
   display: none; }
 
+.active {
+  display: block; }
+
 .header {
-  background-color: #222222;
+  background-color: var(--black-bkg);
   min-height: 75px;
   display: flex; }
 
@@ -81,10 +84,6 @@ body {
 .header__search {
   background: none;
   border: none; }
-  .header__search :hover {
-    fill: #F16D7F; }
-  .header__search:focus {
-    fill: #F16D7F; }
 
 .header__icon {
   margin: 0 41px 0 0; }
@@ -93,22 +92,25 @@ body {
   display: flex; }
 
 .header__search-icon {
-  fill: #FFFFFF; }
+  fill: var(--white-color); }
 
 .header__search-input {
   display: none;
-  background-color: #FFFFFF;
+  background-color: var(--white-color);
   border-radius: 30px; }
+
+.header__search :hover,
+.header__search:focus {
+  fill: #F16D7F; }
 
 .header__link {
   margin: 0 0 0 33px;
   fill: #FFFFFF; }
-  .header__link:hover {
-    fill: #F16D7F; }
-  .header__link:focus {
-    fill: #F16D7F; }
-  .header__link:active {
-    fill: #F16D7F; }
+
+.header__link :hover,
+.header__link:focus,
+.header__link:active {
+  fill: #F16D7F; }
 
 .header__menu-list {
   display: flex;
@@ -119,8 +121,7 @@ body {
   background-color: transparent;
   fill: #FFFFFF; }
 
-.header__burger:hover {
-  fill: #F16D7F; }
+.header__burger:hover,
 .header__burger:focus {
   fill: #F16D7F; }
 
@@ -142,12 +143,9 @@ body {
   text-transform: uppercase;
   margin-bottom: 24px; }
 
-.active {
-  display: block; }
-
 .nav-item__title {
   text-transform: uppercase;
-  color: #F16D7F;
+  color: var(--pink-color);
   margin-bottom: 12px; }
 
 .nav-item__item {
@@ -173,11 +171,8 @@ body {
   margin: 47px 20px 0 0;
   position: relative; }
 
-.products__item:hover .products__item-img {
-  filter: brightness(0.6); }
-
-.products__item:hover .buy {
-  opacity: 1; }
+.products__item-img {
+  transition: filter .2s linear; }
 
 .products__item-title {
   font-size: 13px;
@@ -195,24 +190,11 @@ body {
   color: #F16D7F;
   padding: 0 0 20px 18px; }
 
-.buy {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity .2s linear;
-  cursor: pointer;
-  background-color: transparent;
-  padding: 9px 13px;
-  color: #FFFFFF;
-  display: flex;
-  align-items: center;
-  border: 1px solid #FFFFFF; }
+.products__item:hover .products__item-img {
+  filter: brightness(0.6); }
 
-.buy__img {
-  fill: #FFFFFF;
-  margin-right: 10px; }
+.products__item:hover .buy {
+  opacity: 1; }
 
 .products__button {
   margin: 49px 0 96px 42%;
@@ -221,17 +203,19 @@ body {
   font-size: 16px;
   color: #F16D7F;
   background-color: #FFFFFF; }
-  .products__button:hover {
-    background-color: #FF6A6A;
-    color: #FFFFFF; }
-  .products__button:focus {
-    background-color: #FF6A6A;
-    color: #FFFFFF; }
+
+.products__button:hover {
+  background-color: #FF6A6A;
+  color: #FFFFFF; }
+
+.products__button:focus {
+  background-color: #FF6A6A;
+  color: #FFFFFF; }
 
 .sales__item {
   height: 260px;
   width: 360px;
-  background-color: black; }
+  background-color: bold; }
 
 .sales__item-woman {
   background-image: url(../img/main/woman\ 1.png);
@@ -313,27 +297,23 @@ body {
   width: 256px;
   height: 49px;
   border-radius: 30px 0 0 30px;
-  background-color: #F4F4F4B2; }
+  background-color: var(--dark-grey-color); }
 
 .subscription__button {
   width: 100px;
   height: 56px;
   border-radius: 0 30px 30px 0;
-  background-color: #F16D7F;
-  color: #FFFFFF; }
+  background-color: var(--pink-color);
+  color: var(--white-color); }
 
-.subscription__button:hover {
-  transform: scale(1.3);
-  transition: 1s; }
-.subscription__button:focus {
-  transform: scale(1.3);
-  transition: 1s; }
+.subscription__button:hover,
+.subscription__button:focus,
 .subscription__button:active {
   transform: scale(1.3);
   transition: 1s; }
 
 .advantages {
-  background-color: #222222; }
+  background-color: var(--black-bkg); }
 
 .advantages__title {
   display: none; }
@@ -346,12 +326,12 @@ body {
 
 .advantages__item-title {
   font-size: 20px;
-  color: #FFFFFF;
+  color: var(--white-color);
   padding: 0 0 16px 0; }
 
 .advantages__item-text {
   font-weight: 300;
-  color: #FFFFFF;
+  color: var(--white-color);
   padding: 0 0 104px 0; }
 
 .brand {
@@ -392,13 +372,13 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #222222; }
+  background-color: var(--black-bkg); }
 
 .footer__list {
   display: flex; }
 
 .footer__text {
-  color: #FFFFFF; }
+  color: var(--white-color); }
 
 .footer__item-fcb {
   display: block;
@@ -407,15 +387,11 @@ body {
   width: 20px;
   text-align: center; }
 
-.footer__item-fcb:hover {
-  background-color: #FF6A6A;
-  fill: #FFFFFF; }
-.footer__item-fcb:focus {
-  background-color: #FF6A6A;
-  fill: #FFFFFF; }
+.footer__item-fcb:hover,
+.footer__item-fcb:focus,
 .footer__item-fcb:active {
-  background-color: #FF6A6A;
-  fill: #FFFFFF; }
+  background-color: var(--dark-pink-color);
+  fill: var(--white-color); }
 
 .footer__item-inst {
   display: block;
@@ -424,25 +400,17 @@ body {
   width: 20px;
   text-align: center; }
 
-.footer__item-inst:hover {
-  background-color: #FF6A6A;
-  fill: #FFFFFF; }
-.footer__item-inst:focus {
-  background-color: #FF6A6A;
-  fill: #FFFFFF; }
+.footer__item-inst:hover,
+.footer__item-inst:focus,
 .footer__item-inst:active {
-  background-color: #FF6A6A;
-  fill: #FFFFFF; }
+  background-color: var(--dark-pink-color);
+  fill: var(--white-color); }
 
-.footer__item-p:hover {
-  background-color: #FF6A6A;
-  fill: #FFFFFF; }
+.footer__item-p:hover,
+.footer__item-p:focus,
 .footer__item-p:active {
-  background-color: #FF6A6A;
-  fill: #FFFFFF; }
-.footer__item-p:focus {
-  background-color: #FF6A6A;
-  fill: #FFFFFF; }
+  background-color: var(--dark-pink-color);
+  fill: var(--white-color); }
 
 .footer__item-p {
   display: block;
@@ -451,15 +419,11 @@ body {
   width: 20px;
   text-align: center; }
 
-.footer__item-twit:hover {
-  background-color: #FF6A6A;
-  fill: #FFFFFF; }
+.footer__item-twit:hover,
+.footer__item-twit:focus,
 .footer__item-twit:active {
-  background-color: #FF6A6A;
-  fill: #FFFFFF; }
-.footer__item-twit:focus {
-  background-color: #FF6A6A;
-  fill: #FFFFFF; }
+  background-color: var(--dark-pink-color);
+  fill: var(--white-color); }
 
 .footer__item-twit {
   display: block;
