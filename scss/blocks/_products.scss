@@ -88,3 +88,15 @@
         color: $white-color;
     }
 }
+
+@media (max-width: $desktop-width) {
+    .products__button {
+        margin: 60px;
+    }
+}
+
+@media (max-width: $tablet-width) {
+    .products__button {
+        margin: 60px;
+    }
+}
