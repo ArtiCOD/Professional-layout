@@ -113,3 +113,15 @@
     width: 20px;
     text-align: center;
 }
+
+@media (max-width:$desktop-width) {
+    .footer {
+        height: 79px;
+    }
+}
+
+@media (max-width:$tablet-width) {
+    .footer {
+        height: 143px;
+    }
+}

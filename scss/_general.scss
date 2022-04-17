@@ -19,10 +19,16 @@ body {
 }
 
 .container {
-    width: 1140px;
+    max-width: 1140px;
     margin: 0 auto;
 }
 
 .hiden {
     display: none;
+}
+
+@media (max-width: $desktop-width) {
+    .container {
+        width: 92%;
+    }
 }

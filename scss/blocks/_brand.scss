@@ -4,7 +4,7 @@
 
 .brand-img {
     height: 764px;
-    width: 800px;
+    width: 50%;
 }
 
 .brand-title-wrp {
@@ -37,4 +37,52 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+@media (max-width: $desktop-width) {
+    .brand {
+        &__img {
+            height: 370px;
+            width: 50%;
+            object-fit: contain;
+        }
+
+        &__title {
+            font-size: 44px;
+            font-weight: 900;
+        }
+
+        &__title-lower {
+            font-size: 44px;
+            font-weight: 900;
+        }
+
+        &-title-wrp {
+            width: 50%;
+        }
+    }
+}
+
+@media (max-width: $tablet-width) {
+    .brand {
+        &__img {
+            display: none;
+        }
+
+        &__ttle-wrp {
+            padding: 0 0 0 83px;
+            min-height: 363px;
+        }
+
+        &__title {
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        &__title-lower {
+            font-size: 20px;
+            font-weight: 700;
+        }
+    }
 }
