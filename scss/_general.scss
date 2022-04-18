@@ -27,6 +27,10 @@ body {
     display: none;
 }
 
+.flex {
+    display: flex;
+}
+
 @media (max-width: $desktop-width) {
     .container {
         width: 92%;
