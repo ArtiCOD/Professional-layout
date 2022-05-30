@@ -1,0 +1,20 @@
+.filter__form {
+    display: flex;
+    align-items: center;
+}
+
+.filter__button {
+    background-color: $white-color;
+    border: none;
+}
+
+.filter__text {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $black-bkg;
+}
+
+.filter__img {
+    fill: $black-bkg;
+    border: none;
+}
