@@ -370,6 +370,7 @@
             basket[id].count++;
             cartCountEl.textContent = totalCount();
             basketTotalValueEl.textContent = totalPrice().toFixed(2);
+            renderProductInBasket(id);
         }
         function totalCount() {
             return Object.values(basket).reduce((acc, product) => acc + product.count, 0);
@@ -387,20 +388,20 @@
         }
         function renderNewProductInBasket(productId) {
             const productRow = `
-            <div class = "basketRow" data-productId = "${productId}">
-                <div>${basket[productId].name}</div>
+            <div class = "basketRow" data-productId = '${productId}'>
+                <div>${basket[productId]?.name}</div>
                 <div>
-                    <span class = "productCount">${basket[productId].count}</span> шт.
+                    <span class = "productCount">${basket[productId]?.count}</span> шт.
                 </div>
-                <div>$${basket[productId].price}</div>
+                <div>$${basket[productId]?.count}</div>
                 <div>
-                    $<span class="productTotalRow">${(basket[productId].price * basket[productId].count)}</span>
+                    $<span class="productTotalRow">${(basket[productId]?.price * basket[productId]?.count)}</span>
                 </div>
             </div>
-                        `
-        }
-       // basketTotalEl.insertAdjacentElement('beforebegin', productRow);
+                        `;
 
+            basketTotalEl.insertAdjacentHTML('beforebegin', productRow);
+        }
 
     </script>
 </body>
